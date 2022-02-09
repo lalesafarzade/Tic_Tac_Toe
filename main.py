@@ -21,7 +21,7 @@ turtle.shape(image)
     #t.write(str(i+1))
 
 player1=screen.textinput(title="player1",prompt="Player_1!please put your name")  
-player2=screen.textinput(title="player2",prompt="Player_2! it's your turn!pleaseput your name")
+player2=screen.textinput(title="player2",prompt="Player_2! it's your turn!please put your name")
 
 def choose_first():
     if random.randint(0, 1) == 0:
@@ -88,7 +88,7 @@ while True:
                     t2.penup()
                     t2.goto(-300,300)
                     t2.color('deep pink')
-                    t2.write('Congratulation!You won the game!',font=('Courier', 40, 'bold'))
+                    t2.write(f'Congratulation {player1}!You won the game!',font=('Courier', 20, 'bold'))
                     game_on=False
                 else:
                     if len(filled_position)==9:
@@ -98,7 +98,7 @@ while True:
                         t3.penup()
                         t3.goto(-300,300)
                         t3.color('deep pink')
-                        t3.write('The game is a draw!',font=('Courier', 40, 'bold'))
+                        t3.write('The game is a draw!',font=('Courier', 20, 'bold'))
                         break
                     else:
                         turn=player2
@@ -114,13 +114,13 @@ while True:
                 t4.color('deep pink')
                 t4.write(player_2_marker,font=('Courier', 30, 'bold'))
                 if win_check(player_2_marker,board):
-                    print(f'Congratulation {player_2_marker}!You won the game!')
+                    print(f'Congratulation {player2}!You won the game!')
                     t5=turtle.Turtle()
                     t5.hideturtle()
                     t5.penup()
                     t5.goto(-300,300)
                     t5.color('deep pink')
-                    t5.write(f'Congratulation {player2} !You won the game!',font=('Courier', 40, 'bold'))
+                    t5.write(f'Congratulation {player2} !You won the game!',font=('Courier', 20, 'bold'))
                     game_on=False
                 else:
                     if len(filled_position)==9:
@@ -135,13 +135,10 @@ while True:
                     else:
                         turn=player1
     
-    if not reply():
-        break
+
     
-
-
-
-
+    break
+   
 screen.exitonclick()
 
 
