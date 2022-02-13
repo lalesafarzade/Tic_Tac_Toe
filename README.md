@@ -1,5 +1,5 @@
 # Tic_Tac_Toe
-Using turtle library
+Tic tac toe game Using turtle library
 
 
-![ezgif.com-gif-maker](images/ezgif.com-gif-maker.gif)
+![tic](images/tic.gif)
